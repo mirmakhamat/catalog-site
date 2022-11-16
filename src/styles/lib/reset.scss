@@ -1,0 +1,46 @@
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button,
+textarea {
+    border: 0;
+    background:unset;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 96px;
+    line-height: 104px;
+}
+h2 {
+    font-size: 60px;
+    line-height: 68px;
+}
+h3 {
+    font-size: 48px;
+    line-height: 56px;
+}
+h4 {
+    font-size: 34px;
+    line-height: 42px;
+}
+h5 {
+    font-size: 24px;
+    line-height: 32px;
+}
+h6 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray-6;
+}

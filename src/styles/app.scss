@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+
+@import './lib/fonts.scss';
+@import './lib/color.scss';
+@import './lib/reset.scss';
+@import './lib/class.scss';
+@import './lib/grid.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $black;
+}
+
+.catbox {
+    padding: 26px 8px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    &__icon {
+        margin-bottom: 16px;
+        width: 48px;
+        height: 48px;
+        &.brand{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        max-height: 56px;
+        overflow: hidden;
+        color: $black;
+    }
+    &.active,
+    &:hover {
+        background-color: $green-1;
+        border-color: $green;
+        
+    }
+    &.active {
+        &::before{
+            content:'';
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -16px;
+            border: 8px solid transparent;
+            border-top-color: $green;
+        }
+    }
+}

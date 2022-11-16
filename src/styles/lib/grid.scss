@@ -1,0 +1,93 @@
+@import './mixins.scss';
+
+.container {
+    max-width: 1182px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: content-box;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+    &.no-p{
+        margin: 0;
+        .col-3, .col-9 {
+            padding: 0;
+        }
+    }
+}
+
+.col-20 {
+    @include fb(20%)
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include fb(percentage($i/12))
+    }
+    .m {
+        &b {
+            &-#{$i*10} {
+                margin-bottom: #{$i*10}px;
+            }
+        }
+        &t {
+            &-#{$i*10} {
+                margin-top: #{$i*10}px;
+            }
+        }
+        &r {
+            &-#{$i*10} {
+                margin-right: #{$i*10}px;
+            }
+        }
+        &l {
+            &-#{$i*10} {
+                margin-left: #{$i*10}px;
+            }
+        }
+    }
+}
+
+@media (max-width:1366px) {
+    @for $i from 1 through 12 {
+        .col-xl-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+@media (max-width:768px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+@media (max-width:600px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+@media (max-width:375px) {
+    @for $i from 1 through 12 {
+        .col-xs-#{$i} {
+            @include fb(percentage($i/12))
+        }
+    }
+}
